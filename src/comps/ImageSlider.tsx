@@ -1,13 +1,12 @@
 import Slider from "react-slick";
 import "../style/slick.css"
 import "../style/slick-theme.css"
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+
 import styled from "styled-components";
 import departure from '../Images/departure.jpg';
 import metaphorical from '../Images/metaphorical.jpg';
 import modalsoul from '../Images/modalsoul.jpg';
-import spiritual from '../Images/spiritual.jpg';
+import spiritual from '../Images/spiritual.png';
 
 import rightIconPath  from '../Icons/right.svg'
 import leftIconPath  from '../Icons/left.svg'
@@ -25,8 +24,8 @@ const CustomImg = styled.img`
 `
 
 
-export const RightIcon = () => <CustomImg src={rightIconPath} alt="Right"   />;
-export const LeftIcon = () => <CustomImg src={leftIconPath} alt="Left"    />;
+export const RightIcon = () => <CustomImg src={rightIconPath} alt="Right"/>;
+export const LeftIcon = () => <CustomImg src={leftIconPath} alt="Left" />;
 
 const images = [
     departure,metaphorical,modalsoul,spiritual
@@ -39,7 +38,6 @@ function NextArrow(props: any) {
     return (
         <Arrow className={`right`} onClick={onClick}>
             <RightIcon />
-            {/*<div style={{backgroundColor: 'red', width: '5px', height: '5px' }}/>*/}
         </Arrow>
     );
 }
@@ -68,10 +66,8 @@ export const Arrow = styled.p`
   border-radius: 50%;
   transition: all 0.3s;
   z-index: 1; 
-  // 화살표가 뒤에 묻히길래 z-index 주었다. 
 
   &.left { 
-  // &를 붙여야 한다! 
     left: -50px;
   }
 
@@ -82,13 +78,13 @@ export const Arrow = styled.p`
 
 export const SliderImg = styled.img`
   position: relative; 
-  width: 965px;
-  height: 520px;
+  max-width: 500px;
+  max-height: 500px;
   border-radius: 4px;
 `;
 
 
-function SimpleSlider() {
+function ImageSlider() {
     const [slideState, setSlideState] = useState({
         activeSlide: 0,
         activeSlide2: 0,
@@ -135,4 +131,4 @@ const SliderWrapper = styled.div`
     }
 `
 
-export default SimpleSlider;
+export default ImageSlider;

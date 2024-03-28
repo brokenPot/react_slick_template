@@ -6,7 +6,7 @@ import styled from "styled-components";
 import departure from '../Images/departure.jpg';
 import metaphorical from '../Images/metaphorical.jpg';
 import modalsoul from '../Images/modalsoul.jpg';
-import spiritual from '../Images/spiritual.jpg';
+import spiritual from '../Images/spiritual.png';
 
 import rightIconPath  from '../Icons/right.svg'
 import leftIconPath  from '../Icons/left.svg'
