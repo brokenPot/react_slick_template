@@ -1,8 +1,7 @@
 import Slider from "react-slick";
 import "../style/slick.css"
 import "../style/slick-theme.css"
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+
 import styled from "styled-components";
 import departure from '../Images/departure.jpg';
 import metaphorical from '../Images/metaphorical.jpg';
@@ -12,6 +11,7 @@ import spiritual from '../Images/spiritual.jpg';
 import rightIconPath  from '../Icons/right.svg'
 import leftIconPath  from '../Icons/left.svg'
 import {useState} from "react";
+import Card from "./Card.tsx";
 
 const CustomImg = styled.img`
     width:48px;
@@ -23,7 +23,6 @@ const CustomImg = styled.img`
         box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
     }
 `
-
 
 export const RightIcon = () => <CustomImg src={rightIconPath} alt="Right"   />;
 export const LeftIcon = () => <CustomImg src={leftIconPath} alt="Left"    />;
@@ -39,7 +38,6 @@ function NextArrow(props: any) {
     return (
         <Arrow className={`right`} onClick={onClick}>
             <RightIcon />
-            {/*<div style={{backgroundColor: 'red', width: '5px', height: '5px' }}/>*/}
         </Arrow>
     );
 }
@@ -68,10 +66,8 @@ export const Arrow = styled.p`
   border-radius: 50%;
   transition: all 0.3s;
   z-index: 1; 
-  // 화살표가 뒤에 묻히길래 z-index 주었다. 
 
   &.left { 
-  // &를 붙여야 한다! 
     left: -50px;
   }
 
@@ -80,15 +76,19 @@ export const Arrow = styled.p`
   }
 `;
 
-export const SliderImg = styled.img`
+export const SliderImg = styled.div`
   position: relative; 
   width: 965px;
   height: 520px;
   border-radius: 4px;
+  background-color: darkgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 
-function SimpleSlider() {
+function CustomSlider() {
     const [slideState, setSlideState] = useState({
         activeSlide: 0,
         activeSlide2: 0,
@@ -103,7 +103,6 @@ function SimpleSlider() {
         prevArrow: <PrevArrow />,
         beforeChange: (current: number, next: number) =>
             setSlideState({ activeSlide: next, activeSlide2: current }),
-
     };
 
     return (
@@ -115,7 +114,9 @@ function SimpleSlider() {
                 <Slider {...settings}>
                     {images.map((image) => (
                         <div key={image}>
-                            <SliderImg src={image}/>
+                            <SliderImg>
+                                <Card/>
+                            </SliderImg>
                         </div>
                     ))}
                 </Slider>
@@ -135,4 +136,4 @@ const SliderWrapper = styled.div`
     }
 `
 
-export default SimpleSlider;
+export default CustomSlider;

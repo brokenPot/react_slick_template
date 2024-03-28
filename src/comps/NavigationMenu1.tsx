@@ -55,9 +55,9 @@ const Highlight = styled.span<HighlightProps>`
 `;
 
 const routes = [
-    { path: '/', label: 'Form1', position: '6.6vw' },
-    { path: '/none1', label: 'Form2',position: '17.2vw' },
-    { path: '/none2', label: 'Form3', position: '28vw' },
+    { path: '/', label: 'Slide1', position: '6.6vw' },
+    { path: '/slide2', label: 'Slide2',position: '17.2vw' },
+    { path: '/slide3', label: 'Slide3', position: '28vw' },
 ];
 
 interface routeProps{
