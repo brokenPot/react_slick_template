@@ -1,4 +1,4 @@
-import SimpleSlider from "../comps/SlimpleSlider.tsx";
+import SimpleSlider from "../comps/ImageSlider.tsx";
 
 function Template1() {
 
