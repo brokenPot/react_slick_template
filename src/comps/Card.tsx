@@ -7,7 +7,6 @@ const CustomImg = styled.img`
     height:120px;
     transition: box-shadow 0.3s ease;
     border: 1px solid transparent;
-    //border-radius: 100%;
     &:hover{
         box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
     }
