@@ -4,23 +4,7 @@ import '../responsiveStyle/slick.scss'
 import '../responsiveStyle/slick-theme.scss'
 
 import styled from "styled-components";
-import rightIconPath from "../Icons/right.svg";
-import leftIconPath from "../Icons/left.svg";
-
-
-const CustomImg = styled.img`
-    width:48px;
-    height:48px;
-    transition: box-shadow 0.3s ease;
-    border: 1px solid transparent;
-    border-radius: 100%;
-    &:hover{
-        box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-    }
-`
-
-export const RightIcon = () => <CustomImg src={rightIconPath} alt="Right" />;
-export const LeftIcon = () => <CustomImg src={leftIconPath} alt="Left" />;
+import {LeftIcon, RightIcon} from "./Icons.tsx";
 
 function NextArrow(props: any) {
     const {onClick} = props;
@@ -134,10 +118,7 @@ const StepCover = styled.div`
   border: 1.5px solid lightgrey;
   border-radius: 7px;
   padding: 13px;
-  //width: 100px;
-  //  width: calc(6rem + 7.2vw); 작을때
-
-    width: calc(3rem + 3vw);
+  width: calc(3rem + 3vw);
   color: black;
   height: 70px;
   display: flex;

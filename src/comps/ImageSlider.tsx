@@ -99,7 +99,6 @@ function ImageSlider() {
         prevArrow: <PrevArrow />,
         beforeChange: (current: number, next: number) =>
             setSlideState({ activeSlide: next, activeSlide2: current }),
-
     };
 
     return (

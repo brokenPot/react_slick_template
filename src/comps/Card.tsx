@@ -15,7 +15,6 @@ const CustomImg = styled.img`
 
 const Card = ({image,title,desc}:MusicInfo)=> {
     return (
-        <div>
             <Wrapper>
                 <LeftSide>
                     <CustomImg src={image}/>
@@ -27,7 +26,6 @@ const Card = ({image,title,desc}:MusicInfo)=> {
                     </div>
                 </RightSide>
             </Wrapper>
-        </div>
     );
 }
 
