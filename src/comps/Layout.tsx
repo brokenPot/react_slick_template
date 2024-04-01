@@ -9,7 +9,7 @@ interface LayoutProps {
 function Layout({children}:LayoutProps) {
     return (
         <Background>
-            <NavigationMenu1 navheight={'2vw'}/>
+            <NavigationMenu1 navwidth={"calc(15rem + 30vw)"} navtabfontsize={"calc(1rem + 1vw)"} highlighttabwidth={"calc(3rem + 6vw)"} />
             {children}
         </Background>
     );

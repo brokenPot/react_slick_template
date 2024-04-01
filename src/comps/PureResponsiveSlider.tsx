@@ -44,7 +44,7 @@ function PrevArrow(props: any) {
 
 export const Arrow = styled.p`
   position: absolute;
-  top: 50%;
+  top: 35%;
   transform: translateY(-50%);
   color: #fff;
   width: 48px;
@@ -134,7 +134,10 @@ const StepCover = styled.div`
   border: 1.5px solid lightgrey;
   border-radius: 7px;
   padding: 13px;
-  width: 100px;
+  //width: 100px;
+  //  width: calc(6rem + 7.2vw); 작을때
+
+    width: calc(3rem + 3vw);
   color: black;
   height: 70px;
   display: flex;
