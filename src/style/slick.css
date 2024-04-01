@@ -21,12 +21,13 @@
 .slick-list
 {
     position: relative;
-
     display: block;
     overflow: hidden;
-
     margin: 0;
-    padding: 0;
+    padding: 0 9.5px;
+    &:focus {
+        outline: none;
+    }
 }
 .slick-list:focus
 {
@@ -40,10 +41,10 @@
 .slick-slider .slick-track,
 .slick-slider .slick-list
 {
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
+    /*-webkit-transform: translate3d(0, 0, 0);*/
+    /*-moz-transform: translate3d(0, 0, 0);*/
     -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
+    /*-o-transform: translate3d(0, 0, 0);*/
     transform: translate3d(0, 0, 0);
 }
 
@@ -56,14 +57,17 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    &:before {
+        display: table;
+        content: '';
+    }
+    &:after {
+        display: table;
+        content: '';
+        clear: both;
+    }
 }
-.slick-track:before,
-.slick-track:after
-{
-    display: table;
 
-    content: '';
-}
 .slick-track:after
 {
     clear: both;

@@ -116,7 +116,7 @@ const musicObjArr   = [
 
 
 
-function NextArrow(props: any) {
+ function NextArrow(props: any) {
     const {onClick} = props;
 
     return (
@@ -126,7 +126,7 @@ function NextArrow(props: any) {
     );
 }
 
-function PrevArrow(props: any) {
+ function PrevArrow(props: any) {
     const {onClick} = props;
     return (
         <Arrow className={`left`} onClick={onClick}>
