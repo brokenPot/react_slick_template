@@ -4,6 +4,7 @@ import Layout from "./comps/Layout.tsx";
 import ImageSlider from "./comps/ImageSlider.tsx";
 import CustomSlider from "./comps/CustomSlider.tsx";
 import PureResponsiveSlider from "./comps/PureResponsiveSlider.tsx";
+import MultiSettingSlider from "./comps/MultiSettingSlider.tsx";
 
 export default function  Router() {
     return (
@@ -20,6 +21,11 @@ export default function  Router() {
                 <Route path="/slide3" element={
                     <Layout>
                         <PureResponsiveSlider/>
+                    </Layout>
+                } />
+                <Route path="/slide4" element={
+                    <Layout>
+                        <MultiSettingSlider/>
                     </Layout>
                 } />
             </Routes>

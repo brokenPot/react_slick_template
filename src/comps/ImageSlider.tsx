@@ -57,8 +57,8 @@ export const Arrow = styled.p`
   top: 50%;
   transform: translateY(-50%);
   color: #fff;
-  width: 48px;
-  height: 48px;
+  width: calc(5rem + 5vw);
+  height: calc(5rem + 5vw);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,18 +68,19 @@ export const Arrow = styled.p`
   z-index: 1; 
 
   &.left { 
-    left: -50px;
+    left: -110px;
   }
 
   &.right {
-    right: -50px;
+    right: -110px;
   }
 `;
 
 export const SliderImg = styled.img`
   position: relative; 
-  max-width: 500px;
-  max-height: 500px;
+  width: calc(15rem + 15vw);
+  height: calc(15rem + 15vw);
+    //height: 500px;
   border-radius: 4px;
 `;
 
@@ -106,7 +107,6 @@ function ImageSlider() {
             <div style={{display:"flex", justifyContent:'center', marginBottom:'10px'}}>
                 IMAGES {slideState.activeSlide + 1}/{images.length}
             </div>
-            <div className="slider-container">
                 <Slider {...settings}>
                     {images.map((image) => (
                         <div key={image}>
@@ -114,15 +114,14 @@ function ImageSlider() {
                         </div>
                     ))}
                 </Slider>
-            </div>
         </SliderWrapper>
-
     );
 }
 
 const SliderWrapper = styled.div`
-    width: 1000px;
-    height: 500px;
+    margin-top:10px ;
+    width:50vw;
+    height:500px;
 
     .slick-slide {
         display: flex;
