@@ -47,20 +47,20 @@ export const musicObjArr   = [
     },{
         image : modalsoul,
         title : "modalsoul",
-        desc : "1.	Feather (featuring Cise Starr & Akin)\n"+
-            "2.	Ordinary Joe (featuring Terry Callier)\n"+
-            "3.	Reflection Eternal\n"+
-            "4.	Luv (Sic.) Part 3 (featuring Shing02)\n"+
-            "5.	Music Is Mine\n"+
-            "6.	Eclipse (featuring Substantial)\n"+
-            "7.	The Sign (featuring Pase Rock)\n"+
-            "8.	Thank You (featuring Apani B)\n"+
-            "9.	World's End Rhapsody\n"+
-            "10. Modal Soul (featuring Uyama Hiroto)\n"+
-            "11. Flowers\n"+
-            "12. Sea of Cloud\n"+
-            "13. Light on the Land\n"+
-            "14. Horizon"
+        desc : "1.Feather (featuring Cise Starr & Akin)\n"+
+            "2.Ordinary Joe (featuring Terry Callier)\n"+
+            "3.Reflection Eternal\n"+
+            "4.Luv (Sic.) Part 3 (featuring Shing02)\n"+
+            "5.Music Is Mine\n"+
+            "6.Eclipse (featuring Substantial)\n"+
+            "7.The Sign (featuring Pase Rock)\n"+
+            "8.Thank You (featuring Apani B)\n"+
+            "9.World's End Rhapsody\n"+
+            "10.Modal Soul (featuring Uyama Hiroto)\n"+
+            "11.Flowers\n"+
+            "12.Sea of Cloud\n"+
+            "13.Light on the Land\n"+
+            "14.Horizon"
     }
     ,{
         image : spiritual,

@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
-export const Arrow = styled.p`
+export const Arrow = styled.div`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   color: #fff;
-  width: 48px;
-  height: 48px;
+    width: calc(4rem + 4vw);
+    height: calc(4rem + 4vw);
+    
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,10 +17,10 @@ export const Arrow = styled.p`
   z-index: 1; 
 
   &.left { 
-    left: 50px;
+    left: -15px;
   }
 
   &.right {
-    right: 50px;
+    right: -15px;
   }
 `;

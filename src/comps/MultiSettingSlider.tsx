@@ -27,13 +27,13 @@ function PrevArrow(props: any) {
 }
 
 
-export const Arrow = styled.p`
+export const Arrow = styled.div`
   position: absolute;
   top: 35%;
   transform: translateY(-50%);
   color: #fff;
-  width: 48px;
-  height: 48px;
+  width: calc(4rem + 4vw);
+  height: calc(4rem + 4vw);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,65 +43,81 @@ export const Arrow = styled.p`
   z-index: 1; 
 
   &.left { 
-    left: -50px;
+    left: -15px;
   }
 
   &.right {
-    right: -50px;
+    right: -15px;
   }
 `;
 
 
 function MultiSettingSlider() {
+
     const settings = {
         className: "center",
-        centerMode: true,
         infinite: true,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
-        centerPadding: "60px",
         slidesToShow: 3,
-        speed: 500,
-        rows: 2,
-        slidesPerRow: 2
+        autoplay: true,
+        speed: 2000,
+        autoplaySpeed: 2000,
+        cssEase: "linear",
+        vertical: true,
+        verticalSwiping: true,
+        pauseOnHover: true
     };
     return (
         <SliderWrapper>
-            <Slider {...settings}>
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,12,13,14,15,16 ].map((n) => (
-                    <div key={n}>
-                        <StepCover >
-                            {n}
-                        </StepCover>
-                    </div>
-                ))}
-            </Slider>
+            <Case>
+                <Slider {...settings}>
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map((n) => (
+                        <div key={n}>
+                            <StepCover>
+                                {n}
+                            </StepCover>
+                        </div>
+                    ))}
+                </Slider>
+            </Case>
+
+
         </SliderWrapper>
+
     );
 }
 
 const SliderWrapper = styled.div`
-    width: 800px;
-    height: 120px;
+    width:calc(19rem + 19vw);
+    height: 500px;
 
-    //.slick-slide {
-    //    display: flex;
-    //    justify-content: center;
-    //}
+    .slick-slide {
+        display: flex;
+        justify-content: center;
+    }
+`
+
+const Case = styled.div`
+    width:calc(18rem + 18vw) ;
+    height: 330px;
+    border: 1px solid transparent;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+
 `
 
 const StepCover = styled.div`
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-  border: 1.5px solid lightgrey;
-  border-radius: 7px;
-  padding: 13px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border: 1.5px solid lightgrey;
+    border-radius: 7px;
+    padding: 13px;
     margin-bottom: 30px;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-    width: 40px;
-    height: 20px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(12rem + 12vw);
+    height: 50px;
 `;
 
 

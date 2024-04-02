@@ -55,10 +55,10 @@ const Highlight = styled.span<HighlightProps>`
 `;
 
 const routes = [
-    { path: '/', label: 'Slide1', position: 'calc(1rem + 2.5vw)' },
-    { path: '/slide2', label: 'Slide2',position: 'calc(6.5rem + 12vw)' },
-    { path: '/slide3', label: 'Slide3', position: 'calc(11.5rem + 22vw)' },
-    { path: '/slide4', label: 'Slide4', position: 'calc(11rem + 23vw)' },
+    { path: '/', label: 'Slide1', position: 'calc(0.5rem + 2.5vw)' },
+    { path: '/slide2', label: 'Slide2',position: 'calc(5rem + 9.5vw)' },
+    { path: '/slide3', label: 'Slide3', position: 'calc(8rem + 17.5vw)' },
+    { path: '/slide4', label: 'Slide4', position: 'calc(13rem + 24.2vw)' },
 ];
 
 interface routeProps{
@@ -67,14 +67,14 @@ interface routeProps{
 
 const NavigationMenu1 = ({navwidth = '40vw', navheight = '50px', navbackgroundcolor = '#3e3e3e', navtabfontsize = '3vw',highlighttabwidth='7vw',highlighttabcolorone = '#2e3192', highlighttabcolortwo = '#1bffff' }) => {
     const { pathname } = useLocation();
-    const [highlightRoute, setHighlightRoute] = useState({ path: '/', label: 'Slide1', position: 'calc(1rem + 2.5vw)' });
+    const [highlightRoute, setHighlightRoute] = useState({ path: '/', label: 'Slide1', position: 'calc(1rem + 2.4vw)' });
 
     useEffect(() => {
         // 현재 하이라이트된 탭과 현재 경로가 다른 경우 1초 후 탭이 원래 경로에 해당하는 탭으로 돌아감.
         if(highlightRoute.path !== pathname){
             const timer = setInterval(() => {
                 const route = routes.find((route) => route.path === pathname);
-                setHighlightRoute(route ? route : { path: '/', label: 'Slide1', position: 'calc(1rem + 2.5vw)' });
+                setHighlightRoute(route ? route : { path: '/', label: 'Slide1', position: 'calc(1rem + 2.4vw)' });
             }, 1000);
 
             return () => {

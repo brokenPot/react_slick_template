@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 
-import '../responsiveStyle/slick.scss'
-import '../responsiveStyle/slick-theme.scss'
+import '../style/slick.css'
+import '../style/slick-theme.css'
 
 import styled from "styled-components";
 import {LeftIcon, RightIcon} from "./Icons.tsx";
@@ -26,7 +26,7 @@ function PrevArrow(props: any) {
 }
 
 
-export const Arrow = styled.p`
+export const Arrow = styled.div`
   position: absolute;
   top: 35%;
   transform: translateY(-50%);
@@ -42,11 +42,11 @@ export const Arrow = styled.p`
   z-index: 1; 
 
   &.left { 
-    left: -50px;
+    left: -76px;
   }
 
   &.right {
-    right: -50px;
+    right: -76px;
   }
 `;
 

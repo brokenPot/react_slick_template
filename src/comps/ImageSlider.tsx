@@ -68,11 +68,11 @@ export const Arrow = styled.p`
   z-index: 1; 
 
   &.left { 
-    left: -110px;
+    left: -80px;
   }
 
   &.right {
-    right: -110px;
+    right: -80px;
   }
 `;
 
@@ -125,7 +125,7 @@ const SliderWrapper = styled.div`
 
     .slick-slide {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
     }
 `
 
