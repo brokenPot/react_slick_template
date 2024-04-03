@@ -88,8 +88,8 @@ function CustomSlider() {
 }
 
 const SliderWrapper = styled.div`
+    margin-top:10px ;
     width:calc(20rem + 20vw);
-  
     height: 500px;
 
     .slick-slide {

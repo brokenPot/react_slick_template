@@ -13,8 +13,8 @@ import leftIconPath  from '../Icons/left.svg'
 import {useState} from "react";
 
 const CustomImg = styled.img`
-    width:48px;
-    height:48px;
+    width: calc(2.2rem + 2.2vw);
+    height: calc(2.2rem + 2.2vw);
     transition: box-shadow 0.3s ease;
     border: 1px solid transparent;
     border-radius: 100%;
@@ -57,8 +57,8 @@ export const Arrow = styled.p`
   top: 50%;
   transform: translateY(-50%);
   color: #fff;
-  width: calc(5rem + 5vw);
-  height: calc(5rem + 5vw);
+  //width: calc(4rem + 4vw);
+  //height: calc(4rem + 4vw);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,19 +68,18 @@ export const Arrow = styled.p`
   z-index: 1; 
 
   &.left { 
-    left: -80px;
+    left: -8vw;
   }
 
   &.right {
-    right: -80px;
+    right: -8vw;
   }
 `;
 
 export const SliderImg = styled.img`
   position: relative; 
-  width: calc(15rem + 15vw);
-  height: calc(15rem + 15vw);
-    //height: 500px;
+  width: calc(14.5rem + 14.5vw);
+  height: calc(14.5rem + 14.5vw);
   border-radius: 4px;
 `;
 
@@ -120,7 +119,8 @@ function ImageSlider() {
 
 const SliderWrapper = styled.div`
     margin-top:10px ;
-    width:50vw;
+    //width:80vw;
+    width:calc(16rem + 16vw);
     height:500px;
 
     .slick-slide {

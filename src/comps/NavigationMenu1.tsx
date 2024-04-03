@@ -58,7 +58,7 @@ const routes = [
     { path: '/', label: 'Slide1', position: 'calc(0.5rem + 2.5vw)' },
     { path: '/slide2', label: 'Slide2',position: 'calc(4rem + 10.3vw)' },
     { path: '/slide3', label: 'Slide3', position: 'calc(8rem + 17.5vw)' },
-    { path: '/slide4', label: 'Slide4', position: 'calc(12rem + 24.8vw)' },
+    { path: '/slide4', label: 'Slide4', position: 'calc(11.7rem + 25.3vw)' },
 ];
 
 interface routeProps{

@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from "./comps/Layout.tsx";
 import ImageSlider from "./comps/ImageSlider.tsx";
 import CustomSlider from "./comps/CustomSlider.tsx";
-import PureResponsiveSlider from "./comps/PureResponsiveSlider.tsx";
+import ResponsiveSlider from "./comps/ResponsiveSlider.tsx";
 import MultiSettingSlider from "./comps/MultiSettingSlider.tsx";
 
 export default function  Router() {
@@ -20,7 +20,7 @@ export default function  Router() {
                 } />
                 <Route path="/slide3" element={
                     <Layout>
-                        <PureResponsiveSlider/>
+                        <ResponsiveSlider/>
                     </Layout>
                 } />
                 <Route path="/slide4" element={

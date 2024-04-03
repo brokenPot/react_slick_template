@@ -20,7 +20,7 @@ const Background = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 600px;
+    height: 400px;
 `
 
 

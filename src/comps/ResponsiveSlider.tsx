@@ -51,7 +51,7 @@ export const Arrow = styled.div`
 `;
 
 
-function PureResponsiveSlider() {
+function ResponsiveSlider() {
     const settings = {
         dots: true,
         infinite: false,
@@ -140,4 +140,4 @@ const SliderContainer = styled.div`
     
 `
 
-export default PureResponsiveSlider;
+export default ResponsiveSlider;

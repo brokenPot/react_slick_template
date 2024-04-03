@@ -89,6 +89,7 @@ function MultiSettingSlider() {
 }
 
 const SliderWrapper = styled.div`
+    margin-top:10px ;
     width:calc(19rem + 19vw);
     height: 500px;
 
